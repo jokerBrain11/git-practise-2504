@@ -1,0 +1,48 @@
+{
+    "AppSettings": {
+      "Environment": "Production",
+      "ApplicationName": "MyApp",
+      "Version": "1.0.0"
+    },
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;",
+      "LoggingDatabase": "Server=myLogServerAddress;Database=myLogDatabase;User Id=myLogUsername;Password=myLogPassword;"
+    },
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft": "Warning",
+        "System": "Error"
+      },
+      "Output": {
+        "Console": true,
+        "File": {
+          "Path": "/var/log/myapp/",
+          "FileName": "app.log",
+          "RollingInterval": "Daily"
+        }
+      }
+    },
+    "API": {
+      "BaseUrl": "https://api.myapp.com",
+      "Timeout": 30,
+      "Endpoints": {
+        "Login": "/auth/login",
+        "GetUserProfile": "/user/profile",
+        "UpdateSettings": "/user/settings"
+      }
+    },
+    "Features": {
+      "EnableFeatureX": true,
+      "EnableFeatureY": false
+    },
+    "Security": {
+      "JWT": {
+        "SecretKey": "your-256-bit-secret",
+        "Issuer": "myapp.com",
+        "Audience": "myapp-users",
+        "TokenExpirationMinutes": 60
+      }
+    }
+  }
+  
